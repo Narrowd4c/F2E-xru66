@@ -77,11 +77,12 @@
 </template>
 <style lang="scss" scoped>
 .size {
-  width: 158px;
-  height: 158px;
+  max-width: 158px;
+  max-height: 158px;
+  width:calc(120px + 1.9dvw);
+  height:calc(120px + 1.9dvw);
 }
 .padding{
   padding: 33px 22px 33px 18px;
 }
-
 </style>

@@ -472,7 +472,7 @@ $icon-link-icon-transform:    translate3d(.25em, 0, 0) !default;
 //
 // Style p element.
 
-$paragraph-margin-bottom:   1rem !default;
+$paragraph-margin-bottom:   0rem !default;
 
 
 // Grid breakpoints
@@ -487,7 +487,7 @@ $grid-breakpoints: (
   md: 768px,
   lg: 992px,
   xl: 1200px,
-  xxl: 1440px
+  xxl: 1500px
 ) !default;
 // scss-docs-end grid-breakpoints
 
@@ -651,11 +651,11 @@ $font-sizes: (
 // scss-docs-end font-sizes
 
 // scss-docs-start headings-variables
-$headings-margin-bottom:      $spacer * .5 !default;
+$headings-margin-bottom:      0 !default;
 $headings-font-family:        null !default;
 $headings-font-style:         null !default;
-$headings-font-weight:        500 !default;
-$headings-line-height:        1.2 !default;
+$headings-font-weight:        800 !default;
+$headings-line-height:        1.5 !default;
 $headings-color:              inherit !default;
 // scss-docs-end headings-variables
 

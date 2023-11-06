@@ -26,3 +26,48 @@
 
 @import "./scss/base";
 @import "./scss/utility";
+
+// header
+@include media-breakpoint-up(xxl) {
+  .nav-link-spacing1 {
+    margin-right: 126px;
+  }
+  .nav-link-spacing2 {
+    margin-right: 89px;
+  }
+  .nav-icon-spacing {
+    margin: 0 119px;
+  }
+}
+.header {
+  overflow: visible;
+  max-height: 127px;
+}
+.nav {
+  line-height: 166.667%;
+  letter-spacing: 1.08px;
+}
+.icon {
+  position: relative;
+  top: -28px;
+}
+
+.py-51 {
+  padding-top: 51px;
+  padding-bottom: 51px;
+}
+
+// banner
+.banner-text{
+  font-size: clamp(10px, calc(40px + 2dvw), 100px);
+  letter-spacing: calc(30px - 1dvw);
+  padding-top: calc(60px + 2dvw);
+  font-weight: 800;
+}
+@include media-breakpoint-up(xxl) {
+  .banner-text {
+    font-size: clamp(10px, calc(40px + 3dvw), 100px);
+    letter-spacing: 30px;
+    padding-top: 139px;
+  }
+}
