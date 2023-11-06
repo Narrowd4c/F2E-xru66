@@ -1,0 +1,14 @@
+body{
+    font-family: 'Noto Sans TC', 'Jost', sans-serif;
+}
+img, svg{
+    max-width: 100%;
+    height: auto;
+    width: 100%;
+    vertical-align: middle;
+}
+:is(ul, ol){
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}

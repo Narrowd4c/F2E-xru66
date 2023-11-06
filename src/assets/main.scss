@@ -1,0 +1,28 @@
+@import url('https://fonts.googleapis.com/css2?family=Jost:wght@300;400;500;600;700;800;900&family=Noto+Sans+TC:wght@500;700;800;900&display=swap');
+
+// Custom.scss
+// Option B: Include parts of Bootstrap
+
+// 1. Include functions first (so you can manipulate colors, SVGs, calc, etc)
+@import "~bootstrap/scss/functions";
+
+// 2. Include any default variable overrides here
+@import "./scss/variables";
+@import "./scss/variables-dark";
+
+// 3. Include remainder of required Bootstrap stylesheets
+@import "~bootstrap/scss/maps";
+@import "~bootstrap/scss/mixins";
+@import "~bootstrap/scss/root";
+@import "~bootstrap/scss/utilities";
+@import "~bootstrap/scss/reboot";
+@import "~bootstrap/scss/type";
+@import "~bootstrap/scss/images";
+@import "~bootstrap/scss/containers";
+@import "~bootstrap/scss/grid";
+@import "~bootstrap/scss/helpers";
+@import "~bootstrap/scss/utilities/api";
+// 6. Add additional custom code here
+
+@import "./scss/base";
+@import "./scss/utility";
