@@ -15,7 +15,8 @@ defineProps({
 
 <style lang="scss">
 .title-max-width {
-  max-width: 8ch;
+  white-space: pre-wrap;
+  max-width: 9ch;
 }
 </style>
 
