@@ -4,10 +4,9 @@ body{
 img, svg{
     max-width: 100%;
     height: auto;
-    width: 100%;
     vertical-align: middle;
 }
-:is(ul, ol){
+:is(ul){
     list-style-type: none;
     margin: 0;
     padding: 0;

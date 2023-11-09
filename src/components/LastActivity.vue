@@ -43,10 +43,10 @@ const activities = ref([
   }
 ])
 // swiper
-const swiperEl = ref()
+const swiperActive = ref()
 const swiperParams = {
   scrollbar: {
-    el: '.swiper-scrollbar',
+    el: '.swiper-active-scrollbar',
     draggable: true
   },
   spaceBetween: 32,
@@ -70,18 +70,18 @@ function getDate(date: String) {
 }
 
 onMounted(() => {
-  Object.assign(swiperEl.value, swiperParams)
-  swiperEl?.value.initialize()
+  Object.assign(swiperActive.value, swiperParams)
+  swiperActive?.value.initialize()
 })
 </script>
 
 <template>
-  <div :style="{'--bg': `url(${bg})`}" class="active-bg position-relative overflow-hidden">
+  <div :style="{ '--bg': `url(${bg})` }" class="active-bg position-relative overflow-hidden">
     <IrregularSvg class="position-absolute irregular irregular-top"></IrregularSvg>
     <IrregularSvg class="position-absolute irregular irregular-bottom"></IrregularSvg>
-    <div class="container">
+    <div class="container swiper-active">
       <SectionTitle class="mb-20" sub-title="Last Activity" title="最新活動"></SectionTitle>
-      <swiper-container ref="swiperEl" init="false" class="overflow-visible">
+      <swiper-container ref="swiperActive" init="false" class="overflow-visible">
         <swiper-slide v-for="{ image, title, content, date } in activities" :key="title">
           <div class="d-flex flex-column">
             <img :src="image" :alt="title" class="active-img" />
@@ -97,7 +97,7 @@ onMounted(() => {
         </swiper-slide>
       </swiper-container>
       <div class="mt-20">
-        <div class="swiper-scrollbar mx-auto"></div>
+        <div class="swiper-active-scrollbar mx-auto"></div>
       </div>
     </div>
   </div>
@@ -127,15 +127,16 @@ onMounted(() => {
   }
 }
 
-swiper-container::part(container) {
-  overflow: visible;
-}
-
-.swiper-scrollbar {
-  width: 150px;
-  margin-top: 20px;
-  height: 3px;
-  background: gray;
+.swiper-active {
+  swiper-container::part(container) {
+    overflow: visible;
+  }
+  .swiper-active-scrollbar {
+    width: 150px;
+    margin-top: 20px;
+    height: 3px;
+    background: gray;
+  }
 }
 .swiper-scrollbar-drag {
   height: 3px !important;
