@@ -1,13 +1,18 @@
 <script setup lang="ts">
 import { ref, onMounted } from 'vue'
 import { register } from 'swiper/element/bundle'
+
 import IrregularSvg from './IrregularSvg.vue'
+import SectionTitle from './SectionTitle.vue'
+
 import OIG_1 from '@/assets/images/OIG_1.png'
 import OIG_2 from '@/assets/images/OIG_2.png'
 import OIG_3 from '@/assets/images/OIG_3.png'
+import bg from '@/assets/images/last-active.svg'
 // register Swiper custom elements
 register()
-const activies = ref([
+
+const activities = ref([
   {
     date: '2023-12-26',
     title: '參與台北寵物論壇，爭取貓咪友善環境',
@@ -37,7 +42,8 @@ const activies = ref([
     image: OIG_1
   }
 ])
-const swiperEl = ref({})
+// swiper
+const swiperEl = ref()
 const swiperParams = {
   scrollbar: {
     el: '.swiper-scrollbar',
@@ -54,6 +60,7 @@ const swiperParams = {
     }
   }
 }
+// formateDate
 function getYear(date: String) {
   return date.split('-')[0]
 }
@@ -61,21 +68,21 @@ function getDate(date: String) {
   const formateDate = date.split('-').slice(1)
   return formateDate.join('/')
 }
+
 onMounted(() => {
   Object.assign(swiperEl.value, swiperParams)
-  swiperEl.value.initialize()
+  swiperEl?.value.initialize()
 })
 </script>
 
 <template>
-  <div class="active-bg position-relative overflow-hidden">
+  <div :style="{'--bg': `url(${bg})`}" class="active-bg position-relative overflow-hidden">
     <IrregularSvg class="position-absolute irregular irregular-top"></IrregularSvg>
     <IrregularSvg class="position-absolute irregular irregular-bottom"></IrregularSvg>
     <div class="container">
-      <h3 class="fs-2 text-primary mb-2">Last Activity</h3>
-      <h2 class="display-1 text-secondary mb-20">最新活動</h2>
-      <swiper-container ref="swiperEl" init="false" class="overflow-visible" slides-per-view="3">
-        <swiper-slide v-for="{ image, title, content, date } in activies" :key="i">
+      <SectionTitle class="mb-20" sub-title="Last Activity" title="最新活動"></SectionTitle>
+      <swiper-container ref="swiperEl" init="false" class="overflow-visible">
+        <swiper-slide v-for="{ image, title, content, date } in activities" :key="title">
           <div class="d-flex flex-column">
             <img :src="image" :alt="title" class="active-img" />
             <time class="active-date hstack gap-4 text-primary display-5"
@@ -102,14 +109,14 @@ onMounted(() => {
 @import '~bootstrap/scss/maps';
 @import '~bootstrap/scss/mixins';
 .active-bg {
-  background: url(../assets/images/last-active.svg) center/cover no-repeat;
+  background: var(--bg) center/cover no-repeat;
   padding-top: 150px;
   padding-bottom: 195px;
 }
 .irregular {
   width: 33%;
-    height: 32.5%;
-    transform: rotate(166.897deg);
+  height: 32.5%;
+  transform: rotate(166.897deg);
   &-top {
     top: -15%;
     left: -5%;
@@ -122,7 +129,6 @@ onMounted(() => {
 
 swiper-container::part(container) {
   overflow: visible;
-  position: static;
 }
 
 .swiper-scrollbar {
@@ -150,12 +156,12 @@ swiper-container::part(container) {
     margin-bottom: 46px;
   }
   &-title {
-    line-height: 50px; /* 166.667% */
+    line-height: 166.667%;
     letter-spacing: 7.2px;
     min-height: 100px;
   }
   &-content {
-    line-height: 30px; /* 187.5% */
+    line-height: 187.5%;
     letter-spacing: 3.84px;
   }
 }
