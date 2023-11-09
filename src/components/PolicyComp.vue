@@ -71,7 +71,6 @@ onMounted(() => {
 <style lang="scss">
 @import '~bootstrap/scss/functions';
 @import '@/assets/scss/variables.scss';
-
 .policy {
   margin-left: 10%;
   background: rgba(234, 127, 27, 0.1);

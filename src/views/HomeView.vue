@@ -3,6 +3,7 @@ import BannerComp from '@/components/BannerComp.vue'
 import AboutComp from '@/components/AboutComp.vue'
 import LastActivity from '@/components/LastActivity.vue'
 import PolicyComp from '@/components/PolicyComp.vue';
+import DonateComp from '@/components/DonateComp.vue';
 </script>
 
 <template>
@@ -11,6 +12,7 @@ import PolicyComp from '@/components/PolicyComp.vue';
     <AboutComp class="mb-257"></AboutComp>
     <LastActivity></LastActivity>
     <PolicyComp></PolicyComp>
+    <DonateComp></DonateComp>
   </main>
   
 </template>
