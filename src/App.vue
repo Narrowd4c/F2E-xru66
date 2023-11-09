@@ -5,6 +5,7 @@ import IconFB from './components/icons/IconFB.vue'
 import IconIG from './components/icons/IconIG.vue'
 import IconYT from './components/icons/IconYT.vue'
 import IconLine from './components/icons/IconLine.vue'
+import Footer from './components/FooterComp.vue'
 </script>
 
 <template>
@@ -22,21 +23,22 @@ import IconLine from './components/icons/IconLine.vue'
       </ul>
       <ul class="row ms-auto">
         <li class="col">
-          <RouterLink to="/"><IconFB /></RouterLink>
+          <a href="#"><IconFB /></a>
         </li>
         <li class="col">
-          <RouterLink to="/"><IconIG /></RouterLink>
+          <a href="#"><IconIG /></a>
         </li>
         <li class="col">
-          <RouterLink to="/"><IconYT /></RouterLink>
+          <a href="#"><IconYT /></a>
         </li>
         <li class="col">
-          <RouterLink to="/"><IconLine /></RouterLink>
+          <a href="#"><IconLine /></a>
         </li>
       </ul>
     </header>
   </div>
   <RouterView />
+  <Footer></Footer>
 </template>
 
 <style lang="scss">
