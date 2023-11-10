@@ -33,7 +33,6 @@ const swiperParams = {
   },
   autoHeight: true,
   slidesPerView: 1,
-  loop: true
 }
 onMounted(() => {
   Object.assign(swiperPolicy.value, swiperParams)

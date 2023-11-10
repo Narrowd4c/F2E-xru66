@@ -3,7 +3,7 @@ import IrregularSvg from '@/components/IrregularSvg.vue'
 import SectionTitle from '@/components/SectionTitle.vue'
 </script>
 <template>
-  <div class="container mt-490 d-flex">
+  <div class="container d-flex">
     <div class="w-50 mt-42">
       <SectionTitle class="mb-20" sub-title="About Me" title="立法委員 候選人主張"></SectionTitle>
       <p class="about-article">
@@ -28,9 +28,7 @@ import SectionTitle from '@/components/SectionTitle.vue'
 </template>
 
 <style lang="scss" scoped>
-.mt-490 {
-  margin-top: 490px;
-}
+
 .mt-42 {
   margin-top: 42px;
 }
