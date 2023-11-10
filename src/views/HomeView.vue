@@ -5,6 +5,7 @@ import AboutComp from '@/components/AboutComp.vue'
 import LastActivity from '@/components/LastActivity.vue'
 import PolicyComp from '@/components/PolicyComp.vue';
 import DonateComp from '@/components/DonateComp.vue';
+import FeedBackComp from '@/components/FeedBackComp.vue';
 // register Swiper custom elements
 register()
 </script>
@@ -16,6 +17,7 @@ register()
     <LastActivity class="mb-150"></LastActivity>
     <PolicyComp class="mb-217"></PolicyComp>
     <DonateComp class="mb-150"></DonateComp>
+    <FeedBackComp class="mb-314"></FeedBackComp>
   </main>
   
 </template>
@@ -33,6 +35,8 @@ register()
 .mb-150{
   margin-bottom: 150px;
 }
-
+.mb-314{
+  margin-bottom: 314px;
+}
 /* Swiper styles */
 </style>

@@ -1,45 +1,47 @@
 <template>
-  <div class="container mx-auto">
-    <SectionTitle
-      class="mb-7 text-center mx-auto"
-      sub-title="Donate"
-      title="捐款方案"
-    ></SectionTitle>
-    <div class="mb-12 width-fit hstack mx-auto">
-      <span>累計</span>
-      <span class="ms-2 text-primary font-jost display-4">100,000,000</span>
+  <div>
+    <div class="container mx-auto">
+      <SectionTitle
+        class="mb-7 text-center mx-auto"
+        sub-title="Donate"
+        title="捐款方案"
+      ></SectionTitle>
+      <div class="mb-12 width-fit hstack mx-auto">
+        <span>累計</span>
+        <span class="ms-2 text-primary font-jost display-4">100,000,000</span>
+      </div>
     </div>
-  </div>
-  <swiper-container ref="swiperDonate" init="false">
-    <template v-for="({ image, title, price, people }, i) in donateList" :key="i">
-      <swiper-slide :style="{ '--bg': `url(${image})` }" class="position-relative">
-        <img
-          :src="image"
-          :alt="title"
-          class="position-absolute inset-0 h-100 object-top object-cover w-100 -z-10"
-        />
-        <div class="container">
-          <div class="donate-card rounded-3 width-fit ms-auto">
-            <h3 class="donate-card-title mb-2">{{ title }}</h3>
-            <div class="mb-1 hstack">
-              <p>捐款新台幣</p>
-              <span class="donate-card-price ms-4 font-jost text-primary fw-bold"
-                >NT$ {{ price }}</span
+    <swiper-container ref="swiperDonate" init="false">
+      <template v-for="({ image, title, price, people }, i) in donateList" :key="i">
+        <swiper-slide :style="{ '--bg': `url(${image})` }" class="position-relative">
+          <img
+            :src="image"
+            :alt="title"
+            class="position-absolute inset-0 h-100 object-top object-cover w-100 -z-10"
+          />
+          <div class="container">
+            <div class="donate-card rounded-3 width-fit ms-auto">
+              <h3 class="donate-card-title mb-2">{{ title }}</h3>
+              <div class="mb-1 hstack">
+                <p>捐款新台幣</p>
+                <span class="donate-card-price ms-4 font-jost text-primary fw-bold"
+                  >NT$ {{ price }}</span
+                >
+              </div>
+              <p class="donate-card-people text-gray mb-9">
+                已有<span class="px-1">{{ people }}</span> 人贊助
+              </p>
+              <RouterLink
+                to="/about"
+                class="donate-card-link rounded-3 d-block text-center bg-primary text-white py-4"
+                >前往捐款</RouterLink
               >
             </div>
-            <p class="donate-card-people text-gray mb-9">
-              已有<span class="px-1">{{ people }}</span> 人贊助
-            </p>
-            <RouterLink
-              to="/about"
-              class="donate-card-link rounded-3 d-block text-center bg-primary text-white py-4"
-              >前往捐款</RouterLink
-            >
           </div>
-        </div>
-      </swiper-slide>
-    </template>
-  </swiper-container>
+        </swiper-slide>
+      </template>
+    </swiper-container>
+  </div>
 </template>
 
 <script setup lang="ts">
@@ -62,8 +64,8 @@ const swiperParams = {
   slidesPerView: 1,
   autoplay: {
     delay: 2000
-    },
-  speed: 1000,
+  },
+  speed: 1000
 }
 onMounted(() => {
   Object.assign(swiperDonate.value, swiperParams)

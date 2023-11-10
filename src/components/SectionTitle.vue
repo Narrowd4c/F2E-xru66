@@ -9,14 +9,19 @@ defineProps({
     type: String,
     required: true,
     default: 'title'
+  },
+  width: {
+    type: String,
+    default:'fit-content',
   }
 })
+
 </script>
 
 <style lang="scss">
 .title-max-width {
   white-space: pre-wrap;
-  max-width: 9ch;
+  max-width: v-bind(width);
 }
 
 </style>
