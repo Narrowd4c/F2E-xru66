@@ -33,7 +33,6 @@ const swiperParams = {
   },
   autoHeight: true,
   slidesPerView: 1,
-  loop: true
 }
 onMounted(() => {
   Object.assign(swiperPolicy.value, swiperParams)
@@ -71,7 +70,6 @@ onMounted(() => {
 <style lang="scss">
 @import '~bootstrap/scss/functions';
 @import '@/assets/scss/variables.scss';
-
 .policy {
   margin-left: 10%;
   background: rgba(234, 127, 27, 0.1);

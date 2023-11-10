@@ -3,9 +3,9 @@ import IrregularSvg from '@/components/IrregularSvg.vue'
 import SectionTitle from '@/components/SectionTitle.vue'
 </script>
 <template>
-  <div class="container mt-490 d-flex">
+  <div class="container d-flex">
     <div class="w-50 mt-42">
-      <SectionTitle class="mb-20" sub-title="About Me" title="立法委員 候選人主張"></SectionTitle>
+      <SectionTitle class="mb-20" sub-title="About Me" title="立法委員 候選人主張" width="9ch"></SectionTitle>
       <p class="about-article">
         我堅信，藉由推動更完善的貓咪福利和相關政策，更是間接地投資於台灣的未來。畢竟，民眾的身心健康與工作熱情是推動經濟的核心動力。透過完善的貓咪福利政策，為台灣的
         GDP 經濟帶來巨大效益。
@@ -28,9 +28,7 @@ import SectionTitle from '@/components/SectionTitle.vue'
 </template>
 
 <style lang="scss" scoped>
-.mt-490 {
-  margin-top: 490px;
-}
+
 .mt-42 {
   margin-top: 42px;
 }

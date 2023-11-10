@@ -6,7 +6,7 @@ import IconLine from './icons/IconLine.vue'
 </script>
 
 <template>
-    <footer class="border mt-20">
+    <footer class="border">
     <div class="container pt-75 pb-110 mx-auto row">
       <div class="col">
         <h5 class="mb-10 font-jost">Information</h5>

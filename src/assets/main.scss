@@ -59,6 +59,12 @@
 .ms-18px{
     margin-left: 18px;
 }
+.mt-18px{
+    margin-top: 18px;
+}
+.mb-18px{
+    margin-bottom: 18px;
+}
 .me-18px{
     margin-right: 18px;
 }
@@ -75,4 +81,7 @@
     letter-spacing: 30px;
     padding-top: 139px;
   }
+}
+.width-fit{
+  width: fit-content;
 }
