@@ -1,41 +1,48 @@
 <script setup lang="ts">
-import { register } from 'swiper/element/bundle'
 import BannerComp from '@/components/BannerComp.vue'
 import AboutComp from '@/components/AboutComp.vue'
 import LastActivity from '@/components/LastActivity.vue'
-import PolicyComp from '@/components/PolicyComp.vue';
-import DonateComp from '@/components/DonateComp.vue';
-import FeedBackComp from '@/components/FeedBackComp.vue';
+import PolicyComp from '@/components/PolicyComp.vue'
+import DonateComp from '@/components/DonateComp.vue'
+import FeedBackComp from '@/components/FeedBackComp.vue'
+import { register } from 'swiper/element/bundle'
 // register Swiper custom elements
 register()
+
+function scrollToTop() {
+  window.scrollTo({
+    top: 0,
+    left: 0,
+    behavior: 'smooth'
+  })
+}
 </script>
 
 <template>
-  <main>
-    <BannerComp class="mb-490"/>
+  <div>
+    <BannerComp class="mb-490" />
     <AboutComp class="mb-257"></AboutComp>
     <LastActivity class="mb-150"></LastActivity>
     <PolicyComp class="mb-217"></PolicyComp>
     <DonateComp class="mb-150"></DonateComp>
     <FeedBackComp class="mb-314"></FeedBackComp>
-  </main>
-  
+  </div>
 </template>
 <style lang="scss" scoped>
 
 .mb-490 {
   margin-bottom: 490px;
 }
-.mb-257{
+.mb-257 {
   margin-bottom: 257px;
 }
-.mb-217{
+.mb-217 {
   margin-bottom: 217px;
 }
-.mb-150{
+.mb-150 {
   margin-bottom: 150px;
 }
-.mb-314{
+.mb-314 {
   margin-bottom: 314px;
 }
 /* Swiper styles */

@@ -6,6 +6,7 @@ import IconIG from './components/icons/IconIG.vue'
 import IconYT from './components/icons/IconYT.vue'
 import IconLine from './components/icons/IconLine.vue'
 import Footer from './components/FooterComp.vue'
+import { scrollToTop } from './composables/scrollToTop'
 </script>
 
 <template>
@@ -37,10 +38,21 @@ import Footer from './components/FooterComp.vue'
       </ul>
     </header>
   </div>
+  <button @click="scrollToTop" class="position-fixed z-20 rounded-circle bg-white scroll-button border-0">
+    <img src="/webicon.svg" alt="scrollToTop" />
+  </button>
   <RouterView />
   <Footer></Footer>
 </template>
 
 <style lang="scss">
-
+.scroll-button {
+  top: 55vh;
+  right: 5%;
+  transform: rotate(90deg);
+  width: clamp(60px, 4vw, 134px);
+  height: clamp(60px, 4vw, 134px);
+  padding: 12px 8px 16px;
+  filter: drop-shadow(10px 14px 14px rgba(0, 0, 0, 0.10));
+}
 </style>
