@@ -50,12 +50,12 @@ const swiperParams = {
     draggable: true
   },
   spaceBetween: 32,
-  slidesPerView: 3,
+  slidesPerView: 1,
   breakpoints: {
-    640: {
+    768: {
       slidesPerView: 2
     },
-    1024: {
+    1500: {
       slidesPerView: 3
     }
   }
