@@ -127,15 +127,22 @@ watchEffect(() => {
   top: 50px;
   max-width: 85px;
   height: auto;
-  left: 50%;
 }
-@include media-breakpoint-up(xxl) {
+@include media-breakpoint-up(lg) {
+  .icon-logo {
+    top: -8px;
+    max-width: 108px;
+    max-height: 108px;
+  }
+}
+@include media-breakpoint-up(xl) {
   .icon-logo {
     top: -24px;
     max-width: 158px;
     max-height: 158px;
   }
 }
+
 
 .header {
   max-height: 127px;
