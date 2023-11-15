@@ -29,33 +29,14 @@
 
 // header
 @include media-breakpoint-up(xxl) {
-  .nav-link-spacing1 {
-    margin-right: 126px;
-  }
-  .nav-link-spacing2 {
-    margin-right: 89px;
-  }
-  .nav-icon-spacing {
-    margin: 0 119px;
-  }
+  
 }
-.header {
-  overflow: visible;
-  max-height: 127px;
-}
-.nav {
+
+.nav-font {
   line-height: 166.667%;
   letter-spacing: 1.08px;
 }
-.icon {
-  position: relative;
-  top: -28px;
-}
 
-.py-51 {
-  padding-top: 51px;
-  padding-bottom: 51px;
-}
 .ms-18px{
     margin-left: 18px;
 }

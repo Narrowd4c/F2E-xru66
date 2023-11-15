@@ -32,7 +32,7 @@
                 已有<span class="px-1">{{ people }}</span> 人贊助
               </p>
               <RouterLink
-                to="/about"
+                to="/"
                 class="donate-card-link rounded-3 d-block text-center bg-primary text-white py-4"
                 >前往捐款</RouterLink
               >
@@ -65,7 +65,7 @@ const swiperParams = {
   autoplay: {
     delay: 2000
   },
-  speed: 1000
+  speed: 2000,
 }
 onMounted(() => {
   Object.assign(swiperDonate.value, swiperParams)
