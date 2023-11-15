@@ -9,18 +9,12 @@ import { register } from 'swiper/element/bundle'
 // register Swiper custom elements
 register()
 
-function scrollToTop() {
-  window.scrollTo({
-    top: 0,
-    left: 0,
-    behavior: 'smooth'
-  })
-}
+
 </script>
 
 <template>
   <div>
-    <BannerComp class="mb-490" />
+    <BannerComp class="" />
     <AboutComp class="mb-257"></AboutComp>
     <LastActivity class="mb-150"></LastActivity>
     <PolicyComp class="mb-217"></PolicyComp>
@@ -28,7 +22,7 @@ function scrollToTop() {
     <FeedBackComp class="mb-314"></FeedBackComp>
   </div>
 </template>
-<style lang="scss" scoped>
+<style lang="scss">
 
 .mb-490 {
   margin-bottom: 490px;
@@ -45,5 +39,4 @@ function scrollToTop() {
 .mb-314 {
   margin-bottom: 314px;
 }
-/* Swiper styles */
 </style>

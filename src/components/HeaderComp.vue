@@ -9,7 +9,7 @@
           <RouterLink to="/">Last Activity</RouterLink>
         </li>
         <li><RouterLink to="/">Policy</RouterLink></li>
-        <li><IconLogo class="position-relative icon-logo"></IconLogo></li>
+        <li><IconLogo class="position-relative icon-logo z-10"></IconLogo></li>
         <li><RouterLink to="/">Donate</RouterLink></li>
         <li><RouterLink to="/">Feedback</RouterLink></li>
       </ul>
