@@ -4,31 +4,16 @@
       <ul
         class="d-none justify-content-between flex-grow-1 me-12 me-xl-23 d-lg-flex font-jost fs-5 nav-font"
       >
-        <li><RouterLink to="/">About Me</RouterLink></li>
+        <li><a href="#about">About Me</a></li>
         <li>
-          <RouterLink to="/">Last Activity</RouterLink>
+          <a href="#last-activity">Last Activity</a>
         </li>
-        <li><RouterLink to="/">Policy</RouterLink></li>
-        <li><IconLogo class="position-relative icon-logo"></IconLogo></li>
-        <li><RouterLink to="/">Donate</RouterLink></li>
-        <li><RouterLink to="/">Feedback</RouterLink></li>
+        <li><a href="#policy">Policy</a></li>
+        <li><IconLogo class="position-relative icon-logo z-10"></IconLogo></li>
+        <li><a href="#donate">Donate</a></li>
+        <li><a href="#feedback">Feedback</a></li>
       </ul>
-
-      <ul class="d-none d-lg-flex gap-6 ms-auto">
-        <li>
-          <a href="#"><IconFB /></a>
-        </li>
-        <li>
-          <a href="#"><IconIG /></a>
-        </li>
-        <li>
-          <a href="#"><IconYT /></a>
-        </li>
-        <li>
-          <a href="#"><IconLine /></a>
-        </li>
-      </ul>
-
+      <SocialMedia class="d-none d-lg-flex gap-6 ms-auto" :is-rounded="false"></SocialMedia>
       <div class="d-lg-none text-primary lh-1">
         <span @click="menuToggle" v-show="!menuIsShow" class="material-symbols-outlined">
           menu
@@ -41,29 +26,11 @@
     </header>
     <div :class="{ 'h-0': !menuIsShow }" class="px-8 bg-white z-20 menu">
       <ul class="font-jost md:fs-5 mt-100px text-center fw-bold">
-        <li class="mb-13"><RouterLink to="/" class="d-block">About Me</RouterLink></li>
-        <li class="mb-13">
-          <RouterLink to="/" class="d-block">Last Activity</RouterLink>
-        </li>
-        <li class="mb-13"><RouterLink to="/">Policy</RouterLink></li>
-
-        <li class="mb-13"><RouterLink to="/" class="d-block">Donate</RouterLink></li>
-        <li class="mb-13"><RouterLink to="/" class="d-block">Feedback</RouterLink></li>
-      </ul>
-      <ul class="pt-13 pb-30 border-top gap-4 d-flex justify-content-center">
-        <li>
-          <a href="#" class="rounded-circle p-5 border"><IconFB /></a>
-        </li>
-        <li>
-          <a href="#" class="rounded-circle p-5 border"><IconIG /></a>
-        </li>
-        <li>
-          <a href="#" class="rounded-circle p-5 border"><IconYT /></a>
-        </li>
-        <li>
-          <a href="#" class="rounded-circle p-5 border"><IconLine /></a>
+        <li v-for="{ sectionName, link } in navbar" :key="sectionName" class="mb-13">
+          <a @click="menuToggle" :href="link">{{ sectionName }}</a>
         </li>
       </ul>
+      <SocialMedia class="pt-13 pb-30 border-top gap-4 d-flex justify-content-center" :is-rounded="true"></SocialMedia>
     </div>
   </div>
   <button
@@ -75,14 +42,18 @@
 </template>
 
 <script setup lang="ts">
-import { RouterLink } from 'vue-router'
 import { ref, watchEffect } from 'vue'
 import IconLogo from './icons/IconLogo.vue'
-import IconFB from './icons/IconFB.vue'
-import IconIG from './icons/IconIG.vue'
-import IconYT from './icons/IconYT.vue'
-import IconLine from './icons/IconLine.vue'
+import SocialMedia from './SocialMedia.vue'
 import { scrollToTop } from '../composables/scrollToTop'
+
+const navbar = ref([
+  { sectionName: 'About', link: '#about' },
+  { sectionName: 'Last Activity', link: '#last-activity' },
+  { sectionName: 'Policy', link: '#policy' },
+  { sectionName: 'Donate', link: '#donate' },
+  { sectionName: 'Feedback', link: '#feedback' }
+])
 
 const menuIsShow = ref(false)
 function menuToggle() {
@@ -142,7 +113,6 @@ watchEffect(() => {
     max-height: 158px;
   }
 }
-
 
 .header {
   max-height: 127px;

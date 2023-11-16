@@ -51,11 +51,19 @@
 }
 // banner
 .banner-text{
+  font-weight: 800;
+  font-size: 40px;
+  letter-spacing: 12px;
+  padding-top: 52px;
+}
+@include media-breakpoint-up(xl) {
+  .banner-text{
   font-size: clamp(10px, calc(40px + 2dvw), 100px);
   letter-spacing: calc(30px - 1dvw);
   padding-top: calc(60px + 2dvw);
-  font-weight: 800;
 }
+}
+
 @include media-breakpoint-up(xxl) {
   .banner-text {
     font-size: clamp(10px, calc(40px + 3dvw), 100px);
@@ -63,6 +71,6 @@
     padding-top: 139px;
   }
 }
-.width-fit{
+.w-fit{
   width: fit-content;
 }

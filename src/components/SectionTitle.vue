@@ -12,10 +12,9 @@ defineProps({
   },
   width: {
     type: String,
-    default:'fit-content',
+    default: 'fit-content'
   }
 })
-
 </script>
 
 <style lang="scss">
@@ -23,12 +22,11 @@ defineProps({
   white-space: pre-wrap;
   max-width: v-bind(width);
 }
-
 </style>
 
 <template>
-  <div class="width-fit">
-    <h3 class="fs-2 text-primary mb-2">{{ subTitle }}</h3>
+  <div class="w-fit">
+    <h3 class="fs-2 text-primary mb-2 ps-2">{{ subTitle }}</h3>
     <h2 class="display-1 text-secondary title-max-width">{{ title }}</h2>
   </div>
 </template>

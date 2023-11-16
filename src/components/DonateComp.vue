@@ -6,7 +6,7 @@
         sub-title="Donate"
         title="捐款方案"
       ></SectionTitle>
-      <div class="mb-12 width-fit hstack mx-auto">
+      <div class="mb-12 w-fit hstack mx-auto">
         <span>累計</span>
         <span class="ms-2 text-primary font-jost display-4">100,000,000</span>
       </div>
@@ -20,7 +20,7 @@
             class="position-absolute inset-0 h-100 object-top object-cover w-100 -z-10"
           />
           <div class="container">
-            <div class="donate-card rounded-3 width-fit ms-auto">
+            <div class="donate-card rounded-3 w-fit ms-auto">
               <h3 class="donate-card-title mb-2">{{ title }}</h3>
               <div class="mb-1 hstack">
                 <p>捐款新台幣</p>
@@ -65,7 +65,7 @@ const swiperParams = {
   autoplay: {
     delay: 2000
   },
-  speed: 2000,
+  speed: 2000
 }
 onMounted(() => {
   Object.assign(swiperDonate.value, swiperParams)
