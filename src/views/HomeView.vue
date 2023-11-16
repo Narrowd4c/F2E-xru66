@@ -14,12 +14,12 @@ register()
 
 <template>
   <div>
-    <BannerComp class="" />
-    <AboutComp class="mb-257"></AboutComp>
-    <LastActivity class="mb-150"></LastActivity>
-    <PolicyComp class="mb-217"></PolicyComp>
-    <DonateComp class="mb-150"></DonateComp>
-    <FeedBackComp class="mb-314"></FeedBackComp>
+    <BannerComp />
+    <AboutComp id="about" class="mb-257"></AboutComp>
+    <LastActivity id="last-activity" class="mb-150"></LastActivity>
+    <PolicyComp id="policy" class="mb-217"></PolicyComp>
+    <DonateComp id="donate" class="mb-150"></DonateComp>
+    <FeedBackComp id="feedback" class="mb-314"></FeedBackComp>
   </div>
 </template>
 <style lang="scss">
