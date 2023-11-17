@@ -1,6 +1,35 @@
 .font-jost{
     font-family: 'Jost', sans-serif;
 }
+
+.ms-18px{
+    margin-left: 18px !important;
+}
+.mt-18px{
+    margin-top: 18px !important;
+}
+.mb-18px{
+    margin-bottom: 18px !important;
+}
+.me-18px{
+    margin-right: 18px !important;
+}
+@include media-breakpoint-up(xl) {
+  .ms-xl-18px{
+      margin-left: 18px !important;
+  }
+  .mt-xl-18px{
+      margin-top: 18px !important;
+  }
+  .mb-xl-18px{
+      margin-bottom: 18px !important;
+  }
+  .me-xl-18px{
+      margin-right: 18px !important;
+  }
+}
+
+
 .-z-10{
   z-index: -10;
 }

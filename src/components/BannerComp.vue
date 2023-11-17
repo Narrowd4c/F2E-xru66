@@ -9,10 +9,10 @@ import BannerBackgroundMd from '@/components/BannerBackgroundMd.vue'
     <BannerBackground class="d-none d-md-block -z-10 w-100" />
     <div class="container">
       <div class="position-absolute top-0">
-        <h2 class="banner-text text-secondary text-center text-md-start">
+        <h2 class="mx-auto banner-text text-secondary text-center text-md-start">
           台灣的明天，<br />喵先鋪路
         </h2>
-        <div class="fish ">
+        <div class="fish">
           <img src="@/assets/images/fishicon.svg" alt="" class="fish-icon" />
           <img src="@/assets/images/fishicon.svg" alt="" class="fish-icon-sm" />
         </div>
@@ -26,11 +26,15 @@ import BannerBackgroundMd from '@/components/BannerBackgroundMd.vue'
 @import '~bootstrap/scss/mixins';
 
 .fish {
-  margin-top: calc(6vw);
+  margin-top: calc(120vw + 10px);
+}
+@include media-breakpoint-up(md) {
+  .fish {
+    margin-top: calc(8vw);
+  }
 }
 .fish-icon {
   max-width: 88px;
-  
   transform: translateX(-50%);
 }
 .fish-icon-sm {
@@ -38,6 +42,9 @@ import BannerBackgroundMd from '@/components/BannerBackgroundMd.vue'
   transform: translate(-60%, 100%);
 }
 @include media-breakpoint-up(xl) {
+  .fish {
+    margin-top: calc(6vw);
+  }
   .fish-icon {
     max-width: 148px;
     max-height: 71px;

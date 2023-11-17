@@ -3,7 +3,7 @@ import SocialMedia from './SocialMedia.vue'
 </script>
 
 <template>
-    <footer class="border">
+    <footer class="border-top">
     <div class="container pt-75 pb-110 mx-auto row flex-column flex-lg-row">
       <div class="col">
         <h5 class="mb-10 font-jost d-none d-lg-block">Information</h5>

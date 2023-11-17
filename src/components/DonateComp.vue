@@ -2,7 +2,7 @@
   <div>
     <div class="container mx-auto">
       <SectionTitle
-        class="mb-7 text-center mx-auto"
+        class="mb-7 text-xl-center mx-xl-auto"
         sub-title="Donate"
         title="捐款方案"
       ></SectionTitle>
