@@ -108,8 +108,9 @@ onMounted(() => {
 @import '@/assets/scss/variables.scss';
 @import '~bootstrap/scss/maps';
 @import '~bootstrap/scss/mixins';
+
 .active-bg {
-  background: var(--bg) center/cover no-repeat;
+  background: var(--bg) center/100% 100% no-repeat;
   padding-top: 150px;
   padding-bottom: 195px;
 }

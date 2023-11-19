@@ -18,12 +18,12 @@ import SectionTitle from '@/components/SectionTitle.vue'
     <div class="grid-thumbnail mx-auto w-fit position-relative">
       <img src="@/assets/images/about-cat.png" alt="avatar" class="avatar" />
       <IrregularSvg class="irregular-svg position-absolute -z-10"></IrregularSvg>
-      <div class="name-position  position-absolute d-flex d-lg-block">
+      <div class="name-position  position-absolute d-flex d-xl-block">
         <div class="order-2 position-relative bottom-50 start-25 w-100 flex-grow-1">
           <h1 class="name">喵立翰</h1>
           <h2 class="name-en font-jost">Miao Li-Han</h2>
         </div>
-        <div class="fish order-1 d-flex d-lg-block w-fit">
+        <div class="fish order-1 d-flex d-xl-block w-fit">
           <img src="@/assets/images/fishicon.svg" alt="icon" class="fish-icon" />
           <img src="@/assets/images/fishicon.svg" alt="small-icon" class="fish-icon-sm" />
         </div>
@@ -55,7 +55,7 @@ import SectionTitle from '@/components/SectionTitle.vue'
     'thumbnail'
     'content';
 }
-@include media-breakpoint-up(lg) {
+@include media-breakpoint-up(xl) {
   .grid-areas {
     grid-template-areas:
       'title thumbnail thumbnail'
@@ -106,7 +106,7 @@ import SectionTitle from '@/components/SectionTitle.vue'
   top: 25%;
   right: -5%;
 }
-@include media-breakpoint-up(lg) {
+@include media-breakpoint-up(xl) {
   .irregular-svg {
     width: clamp(0px, 100%, 600px);
     height: clamp(0px, 100%, 532px);
@@ -126,7 +126,7 @@ import SectionTitle from '@/components/SectionTitle.vue'
   letter-spacing: 6.72px;
   padding-left: 6.72px;
 }
-@include media-breakpoint-up(lg) {
+@include media-breakpoint-up(xl) {
   .name {
     font-size: 80px;
     letter-spacing: 22.4px;

@@ -13,7 +13,10 @@
     </div>
     <swiper-container ref="swiperDonate" init="false">
       <template v-for="({ image, title, price, people }, i) in donateList" :key="i">
-        <swiper-slide :style="{ '--bg': `url(${image})` }" class="position-relative">
+        <swiper-slide
+          :style="{ '--bg': `url(${image})` }"
+          class="swiper-donate-slide position-relative"
+        >
           <img
             :src="image"
             :alt="title"
@@ -31,11 +34,29 @@
               <p class="donate-card-people text-gray mb-9">
                 已有<span class="px-1">{{ people }}</span> 人贊助
               </p>
-              <RouterLink
-                to="/"
-                class="donate-card-link rounded-3 d-block text-center bg-primary text-white py-4"
-                >前往捐款</RouterLink
+              <button
+                @click="showDonate(title)"
+                class="border-0 donate-card-link rounded-3 d-block text-center bg-primary text-white py-4"
               >
+                前往捐款
+              </button>
+              <Teleport to="#app">
+                <div
+                  v-if="showDonateDialog && current === title"
+                  @click.self="showDonateDialog = false"
+                  class="w-100 h-100 z-30 inset-0 bg-black bg-opacity-50 position-fixed d-flex align-items-center justify-content-center"
+                >
+                  <div class="container">
+                    <div class="row bg-white">
+                      <img :src="image" :alt="title" class="col-7" />
+                      <div class="col-5">
+                        <h1 class="display-1">Mococo</h1>
+                        <button @click="showDonateDialog = false">X</button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </Teleport>
             </div>
           </div>
         </swiper-slide>
@@ -45,10 +66,9 @@
 </template>
 
 <script setup lang="ts">
-import { RouterLink } from 'vue-router'
 import { ref, onMounted } from 'vue'
 import SectionTitle from './SectionTitle.vue'
-import donate1 from '@/assets/images/donate1.jpeg'
+import donate1 from '@/assets/images/donate1.png'
 import donate2 from '@/assets/images/donate2.png'
 import donate3 from '@/assets/images/donate3.png'
 
@@ -62,15 +82,27 @@ const swiperDonate = ref()
 const swiperParams = {
   loop: true,
   slidesPerView: 1,
-  autoplay: {
-    delay: 2000
-  },
-  speed: 2000
+  // autoplay: {
+  //   delay: 2000
+  // },
+  speed: 2000,
+  breakpoints: {
+    1500: {
+      slidesPerView: 2
+    }
+  }
 }
 onMounted(() => {
   Object.assign(swiperDonate.value, swiperParams)
   swiperDonate.value?.initialize()
 })
+
+const showDonateDialog = ref(false)
+const current = ref('')
+function showDonate(val: string) {
+  showDonateDialog.value = true
+  current.value = val
+}
 </script>
 
 <style lang="scss" scoped>
