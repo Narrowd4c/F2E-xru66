@@ -27,7 +27,6 @@
       xlink:href="@/assets/images/banner.jpeg"
       clip-path="url(#image-clip-md)"
     />
-    <!---->
 
     <path
       d="M0 0H375V607.5C375 607.5 352 620.5 303 620.5C254 620.5 213.5 600.257 186.5 591C159.5 581.743 105 565.5 61 565.5C17 565.5 0 574 0 574V0Z"
