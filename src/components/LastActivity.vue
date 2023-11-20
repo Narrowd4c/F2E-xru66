@@ -28,9 +28,7 @@
 <script setup lang="ts">
 import { ref, onMounted } from 'vue'
 
-import IrregularSvg from './IrregularSvg.vue'
 import SectionTitle from './SectionTitle.vue'
-
 import OIG_1 from '@/assets/images/OIG_1.png'
 import OIG_2 from '@/assets/images/OIG_2.png'
 import OIG_3 from '@/assets/images/OIG_3.png'
