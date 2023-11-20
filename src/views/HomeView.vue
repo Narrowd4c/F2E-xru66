@@ -14,7 +14,7 @@ register()
 
 <template>
   <div>
-    <BannerComp />
+    <BannerComp class="mb-20"/>
     <AboutComp id="about" class="mb-257"></AboutComp>
     <LastActivity id="last-activity" class="mb-150"></LastActivity>
     <PolicyComp id="policy" class="mb-217"></PolicyComp>

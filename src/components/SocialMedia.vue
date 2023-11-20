@@ -7,7 +7,7 @@
 </template>
 
 <script setup lang="ts">
-import { ref } from 'vue'
+import { shallowRef } from 'vue'
 import IconFB from './icons/IconFB.vue'
 import IconIG from './icons/IconIG.vue'
 import IconYT from './icons/IconYT.vue'
@@ -19,7 +19,7 @@ const props = defineProps({
     }
 })
 
-const images = ref([
+const images = shallowRef([
     { name:'FaceBook', img: IconFB }, { name:'Instagram', img: IconIG }, { name:'Youtube' ,img: IconYT }, { name:'Line' ,img: IconLine }])
 </script>
 

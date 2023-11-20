@@ -14,7 +14,8 @@
 @import "~bootstrap/scss/maps";
 @import "~bootstrap/scss/mixins";
 @import "~bootstrap/scss/root";
-@import "~bootstrap/scss/utilities";
+
+@import "./scss/utilities";
 @import "~bootstrap/scss/reboot";
 @import "~bootstrap/scss/type";
 @import "~bootstrap/scss/images";
@@ -24,53 +25,22 @@
 @import "~bootstrap/scss/utilities/api";
 // 6. Add additional custom code here
 
-@import "./scss/base";
-@import "./scss/utility";
-
-// header
-@include media-breakpoint-up(xxl) {
-  
+img, svg{
+    max-width: 100%;
+    height: auto;
+    vertical-align: middle;
 }
 
-.nav-font {
-  line-height: 166.667%;
-  letter-spacing: 1.08px;
+:is(ul){
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
 }
 
-.ms-18px{
-    margin-left: 18px;
-}
-.mt-18px{
-    margin-top: 18px;
-}
-.mb-18px{
-    margin-bottom: 18px;
-}
-.me-18px{
-    margin-right: 18px;
-}
-// banner
-.banner-text{
-  font-weight: 800;
-  font-size: 40px;
-  letter-spacing: 12px;
-  padding-top: 52px;
-}
-@include media-breakpoint-up(xl) {
-  .banner-text{
-  font-size: clamp(10px, calc(40px + 2dvw), 100px);
-  letter-spacing: calc(30px - 1dvw);
-  padding-top: calc(60px + 2dvw);
-}
+.font-jost{
+    font-family: 'Jost', sans-serif;
 }
 
-@include media-breakpoint-up(xxl) {
-  .banner-text {
-    font-size: clamp(10px, calc(40px + 3dvw), 100px);
-    letter-spacing: 30px;
-    padding-top: 139px;
-  }
-}
-.w-fit{
-  width: fit-content;
+.inset-0 {
+  inset: 0;
 }

@@ -1,6 +1,34 @@
+<template>
+  <div :style="{ '--bg': `url(${bg})` }" class="active-bg position-relative overflow-hidden">
+    <!-- <IrregularSvg class="position-absolute irregular irregular-top"></IrregularSvg>
+    <IrregularSvg class="position-absolute irregular irregular-bottom"></IrregularSvg> -->
+    <div class="container swiper-active">
+      <SectionTitle class="mb-20" sub-title="Last Activity" title="最新活動"></SectionTitle>
+      <swiper-container ref="swiperActive" init="false" class="overflow-visible">
+        <swiper-slide v-for="{ image, title, content, date } in activities" :key="title">
+          <div class="d-flex flex-column">
+            <img :src="image" :alt="title" class="active-img" />
+            <time class="active-date hstack gap-4 text-primary display-5"
+              >{{ getYear(date) }}<span class="fs-2">{{ getDate(date) }}</span>
+              <div class="border w-100"></div
+            ></time>
+            <h4 class="active-title mb-4 fw-bold">{{ title }}</h4>
+            <p class="active-content">
+              {{ content }}
+            </p>
+          </div>
+        </swiper-slide>
+      </swiper-container>
+      <div class="mt-20">
+        <div class="swiper-active-scrollbar mx-auto"></div>
+      </div>
+    </div>
+  </div>
+</template>
+
+
 <script setup lang="ts">
 import { ref, onMounted } from 'vue'
-
 
 import IrregularSvg from './IrregularSvg.vue'
 import SectionTitle from './SectionTitle.vue'
@@ -9,8 +37,6 @@ import OIG_1 from '@/assets/images/OIG_1.png'
 import OIG_2 from '@/assets/images/OIG_2.png'
 import OIG_3 from '@/assets/images/OIG_3.png'
 import bg from '@/assets/images/last-active.svg'
-
-
 
 const activities = ref([
   {
@@ -75,39 +101,12 @@ onMounted(() => {
 })
 </script>
 
-<template>
-  <div :style="{ '--bg': `url(${bg})` }" class="active-bg position-relative overflow-hidden">
-    <IrregularSvg class="position-absolute irregular irregular-top"></IrregularSvg>
-    <IrregularSvg class="position-absolute irregular irregular-bottom"></IrregularSvg>
-    <div class="container swiper-active">
-      <SectionTitle class="mb-20" sub-title="Last Activity" title="最新活動"></SectionTitle>
-      <swiper-container ref="swiperActive" init="false" class="overflow-visible">
-        <swiper-slide v-for="{ image, title, content, date } in activities" :key="title">
-          <div class="d-flex flex-column">
-            <img :src="image" :alt="title" class="active-img" />
-            <time class="active-date hstack gap-4 text-primary display-5"
-              >{{ getYear(date) }}<span class="fs-2">{{ getDate(date) }}</span>
-              <div class="border w-100"></div
-            ></time>
-            <h4 class="active-title mb-4 fw-bold">{{ title }}</h4>
-            <p class="active-content">
-              {{ content }}
-            </p>
-          </div>
-        </swiper-slide>
-      </swiper-container>
-      <div class="mt-20">
-        <div class="swiper-active-scrollbar mx-auto"></div>
-      </div>
-    </div>
-  </div>
-</template>
-
 <style lang="scss">
 @import '~bootstrap/scss/functions';
 @import '@/assets/scss/variables.scss';
 @import '~bootstrap/scss/maps';
 @import '~bootstrap/scss/mixins';
+
 .active-bg {
   background: var(--bg) center/cover no-repeat;
   padding-top: 150px;
