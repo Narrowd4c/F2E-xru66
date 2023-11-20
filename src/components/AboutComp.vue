@@ -5,7 +5,7 @@ import SectionTitle from '@/components/SectionTitle.vue'
 <template>
   <div class="container d-grid grid-areas">
     <SectionTitle
-      class="grid-title mb-6 "
+      class="grid-title mb-6"
       sub-title="About Me"
       title="立法委員 候選人主張"
       width="9ch"
@@ -17,9 +17,9 @@ import SectionTitle from '@/components/SectionTitle.vue'
     </p>
     <div class="grid-thumbnail mx-auto w-fit position-relative">
       <img src="@/assets/images/about-cat.png" alt="avatar" class="avatar" />
-      <IrregularSvg class="irregular-svg position-absolute -z-10"></IrregularSvg>
-      <div class="name-position  position-absolute d-flex d-xl-block">
-        <div class="order-2 position-relative bottom-50 start-25 w-100 flex-grow-1">
+      <IrregularSvg class="irregular-svg position-absolute z-n1"></IrregularSvg>
+      <div class="name-position position-absolute d-flex d-xl-block">
+        <div class="order-2 position-relative bottom-50 start-sm-25 w-100 flex-grow-1">
           <h1 class="name">喵立翰</h1>
           <h2 class="name-en font-jost">Miao Li-Han</h2>
         </div>

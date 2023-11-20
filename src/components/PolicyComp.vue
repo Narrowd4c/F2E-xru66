@@ -1,3 +1,39 @@
+<template>
+  <div class="container">
+    <SectionTitle class="mb-15" sub-title="Policy" title="政策議題"></SectionTitle>
+    <div class="policy bg-primary bg-opacity-10 position-relative">
+      <swiper-container
+        ref="swiperPolicy"
+        init="false"
+        class="pb-15 pb-xl-0 swiper-policy-container"
+      >
+        <swiper-slide
+          class="h-auto d-flex align-items-center"
+          v-for="{ title, image, contents } in policyList"
+          :key="title"
+        >
+          <div class="row policy-card px-8 py-xl-20 justify-content-center align-items-xl-start">
+            <img class="col-lg-8 col-xl-7 p-0 pe-xl-6 policy-card-img" :src="image" :alt="title" />
+            <div class="col-lg-8 col-xl-5 p-0 ps-xl-6 align-self-start">
+              <h3 class="policy-card-title fw-bold">{{ title }}</h3>
+              <ol class="policy-card-content">
+                <li v-for="content in contents" :key="content.slice(0, 10)">
+                  <p>
+                    {{ content }}
+                  </p>
+                </li>
+              </ol>
+            </div>
+          </div>
+        </swiper-slide>
+      </swiper-container>
+      <div class="swiper-policy-scrollbar"></div>
+      <img class="position-absolute policy-fish-1" src="@/assets/images/fishicon.svg" alt="fish-icon" aria-hidden="true"/>
+      <img class="position-absolute policy-fish-2" src="@/assets/images/fishicon.svg" alt="fish-icon" aria-hidden="true" />
+    </div>
+  </div>
+</template>
+
 <script setup lang="ts">
 import { ref, onMounted } from 'vue'
 import SectionTitle from './SectionTitle.vue'
@@ -47,41 +83,6 @@ onMounted(() => {
 })
 </script>
 
-<template>
-  <div class="container">
-    <SectionTitle class="mb-15" sub-title="Policy" title="政策議題"></SectionTitle>
-    <div class="policy bg-primary bg-opacity-10 position-relative">
-      <swiper-container
-        ref="swiperPolicy"
-        init="false"
-        class="pb-15 pb-xl-0 swiper-policy-container"
-      >
-        <swiper-slide
-          class="h-auto d-flex align-items-center"
-          v-for="{ title, image, contents } in policyList"
-          :key="title"
-        >
-          <div class="row policy-card px-8 py-xl-20 justify-content-center align-items-xl-start">
-            <img class="col-lg-8 col-xl-7 p-0 pe-xl-6 policy-card-img" :src="image" :alt="title" />
-            <div class="col-lg-8 col-xl-5 p-0 ps-xl-6 align-self-start">
-              <h3 class="policy-card-title fw-bold">{{ title }}</h3>
-              <ol class="policy-card-content">
-                <li v-for="content in contents" :key="content.slice(0, 10)">
-                  <p>
-                    {{ content }}
-                  </p>
-                </li>
-              </ol>
-            </div>
-          </div>
-        </swiper-slide>
-      </swiper-container>
-      <div class="swiper-policy-scrollbar"></div>
-      <img class="position-absolute policy-fish-1" src="@/assets/images/fishicon.svg" alt="" />
-      <img class="position-absolute policy-fish-2" src="@/assets/images/fishicon.svg" alt="" />
-    </div>
-  </div>
-</template>
 <style lang="scss">
 @import '~bootstrap/scss/functions';
 @import '@/assets/scss/variables.scss';
@@ -182,8 +183,8 @@ onMounted(() => {
     bottom: -30px;
   }
   &-2 {
-    right: -3%;
-    bottom: -50px;
+    right: -6%;
+    bottom: -78px;
     max-width: 246px;
   }
 }

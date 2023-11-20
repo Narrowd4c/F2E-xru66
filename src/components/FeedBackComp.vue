@@ -7,7 +7,7 @@
           sub-title="FeedBack"
           title="民眾服務信箱"
         ></SectionTitle>
-        <h3 class="mb-3 mb-xl-18px text-center text-xl-start">您的聲音，我們的行動！</h3>
+        <h3 class="mb-3 mb-xl-4 text-center text-xl-start">您的聲音，我們的行動！</h3>
         <p class="font-space text-gray mb-6">
           親愛的鄉親，每一位市民的意見都是我們社區前進的原動力。無論大小事，我都誠摯希望聽到您的建議。分享您的想法，一同為我們的未來打造更美好！
         </p>

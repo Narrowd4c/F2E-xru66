@@ -9,13 +9,13 @@ import SocialMedia from './SocialMedia.vue'
         <h5 class="mb-10 font-jost d-none d-lg-block">Information</h5>
         <ul class="text-center text-lg-start">
           <li class="mb-8 d-flex align-items-start justify-content-center justify-content-lg-start">
-            <img class="pt-1 me-18px" src="/address.png" alt="address">
+            <img class="pt-1 me-4" src="/address.png" alt="address">
             <a href="#">喵星區，毛茸茸大道88號，喵喵大樓3樓</a></li>
           <li class="mb-8">
-            <img class="me-18px" src="/phone.png" alt="phone">
+            <img class="me-4" src="/phone.png" alt="phone">
             <a href="tel:+02-888-5678">(02) 888-5678</a></li>
           <li>
-            <img class="me-18px" src="/email.svg" alt="email"><a href="mailto:@meowoffice@linmeow.tw">meowoffice@linmeow.tw</a>
+            <img class="me-4" src="/email.svg" alt="email"><a href="mailto:@meowoffice@linmeow.tw">meowoffice@linmeow.tw</a>
           </li>
         </ul>
       </div>
