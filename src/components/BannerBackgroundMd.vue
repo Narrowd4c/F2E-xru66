@@ -24,7 +24,7 @@
       x="-510%"
       y="0%"
       width="700%"
-      xlink:href="@/assets/images/banner.jpeg"
+      xlink:href="@/assets/images/banner.jpg"
       clip-path="url(#image-clip-md)"
     />
 

@@ -23,7 +23,7 @@
       x="-110%"
       y="-20%"
       width="230%"
-      xlink:href="@/assets/images/banner.jpeg"
+      xlink:href="@/assets/images/banner.jpg"
       clip-path="url(#imageClip)"
     />
   </svg>
