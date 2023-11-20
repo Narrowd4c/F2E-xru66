@@ -1,7 +1,5 @@
 <template>
   <div :style="{ '--bg': `url(${bg})` }" class="active-bg position-relative overflow-hidden">
-    <!-- <IrregularSvg class="position-absolute irregular irregular-top"></IrregularSvg>
-    <IrregularSvg class="position-absolute irregular irregular-bottom"></IrregularSvg> -->
     <div class="container swiper-active">
       <SectionTitle class="mb-20" sub-title="Last Activity" title="最新活動"></SectionTitle>
       <swiper-container ref="swiperActive" init="false" class="overflow-visible">
