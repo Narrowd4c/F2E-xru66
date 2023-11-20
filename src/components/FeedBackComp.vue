@@ -29,7 +29,6 @@
               class="border-0 h-214 w-100 px-4 py-2 font-space"
               type="text"
               id="comment"
-              placeholder="請輸入"
             ></textarea>
           </div>
           <button class="border-0 rounded-3 w-100 py-4 bg-primary text-white">送出</button>
@@ -43,9 +42,9 @@
 import SectionTitle from '@/components/SectionTitle.vue'
 import { shallowRef } from 'vue'
 const inputList = shallowRef([
-  { id: 'user-name', placeholder: '請輸入', label: '姓名', type:'text' },
-  { id: 'email', placeholder: '請輸入', label: 'Email' ,type:'email'},
-  { id: 'phone', placeholder: '請輸入', label: '手機' ,type:'text'},
+  { id: 'user-name', placeholder: '請輸入姓名', label: '姓名', type:'text' },
+  { id: 'email', placeholder: '請輸入 Email', label: 'Email' ,type:'email'},
+  { id: 'phone', placeholder: '請輸入手機號碼', label: '手機' ,type:'text'},
 ])
 </script>
 
