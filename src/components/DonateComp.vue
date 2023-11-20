@@ -55,19 +55,19 @@
                           眾所皆知貓是外星人派來統治地球的。但牠們發現，只要一直喵喵叫，就能吃到很多好吃的，所以牠們決定要收人類為僕。除了飲食外，玩樂也是相當重要，要時刻注意主子的運動量，才能活得長長久久喔。
                         </p>
                         <p class="mb-2 mb-xxl-4">捐款新台幣</p>
-                        <div class="row justify-content-center gap-4 font-jost mb-10">
+                        <div class="row align-items-center font-jost mb-10 justify-content-center justify-content-xl-between">
                           <button
-                            class="col-md-2 col-xl-3 order-1 order-xl-0 bg-white border-1 rounded-3 py-2 px-4 py-xxl-4 fs-5"
+                            class="col-4 col-xl-3 me-4 me-xl-0 order-1 order-xl-0 bg-white border-1 rounded-3 py-2 px-4 py-xxl-4 fs-5"
                           >
                             - $100
                           </button>
                           <p
-                            class="col-12 col-xl order-0 donate-card-price mx-4 text-primary fw-bold"
+                            class="text-center col-xl-6 order-0 donate-card-price text-primary fw-bold"
                           >
                             NT ${{ price }}
                           </p>
                           <button
-                            class="col-md-2 col-xl-3 order-1 order-xl-0 bg-white border-1 rounded-3 py-2 px-4 py-xxl-4 fs-5"
+                            class="col-4 col-xl-3 order-1 order-xl-0 bg-white border-1 rounded-3 py-2 px-4 py-xxl-4 fs-5"
                           >
                             + $100
                           </button>
