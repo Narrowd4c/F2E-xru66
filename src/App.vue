@@ -4,6 +4,9 @@ import Footer from './components/FooterComp.vue'
 import Header from './components/HeaderComp.vue'
 import { useHead } from '@unhead/vue'
 import ogImage from '@/assets/images/OIG_2.png'
+
+const ogImg = new URL(ogImage, window.location.origin).href;
+
 useHead({
   title: '2024 喵立漢立委競選網站',
   link: [
@@ -13,7 +16,7 @@ useHead({
     }
   ],
   meta: [
-    { property: 'og:image', content: ogImage },
+    { property: 'og:image', content: ogImg },
     { property: 'og:image:width', content: 900 },
     { property: 'og:image:height', content: 450 },
     { property: 'og:title', content: '2024 喵立漢立委競選網站' },
@@ -22,6 +25,7 @@ useHead({
     { property: 'og:type', content: 'website' }
   ]
 })
+
 </script>
 
 <template>
