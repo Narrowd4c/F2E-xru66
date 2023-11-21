@@ -1,6 +1,6 @@
 # F2E
 
-[AWS Amplify 靜態網站部署測試](https://aws-amplify.d26w3josgyxh4w.amplifyapp.com/)
+[AWS Amplify 靜態網站部署](https://aws-amplify.d26w3josgyxh4w.amplifyapp.com/)
 
 [F2E 活動網址](https://2023.thef2e.com/)
 
