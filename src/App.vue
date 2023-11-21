@@ -12,7 +12,7 @@ useHead({
     }
   ],
   meta: [
-    { property: 'og:image', content: '/og-img.png' },
+    { property: 'og:image', content: `${window.location.href}og-img.png` },
     { property: 'og:image:width', content: 900 },
     { property: 'og:image:height', content: 450 },
     { property: 'og:title', content: '2024 喵立漢立委競選網站' },
@@ -21,6 +21,8 @@ useHead({
     { property: 'og:type', content: 'website' }
   ]
 })
+
+console.log(import.meta.env.BASE_URL)
 </script>
 
 <template>
