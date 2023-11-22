@@ -41,7 +41,7 @@
                   @click.self="showDonateDialog = false"
                   class="w-100 h-100 z-3 inset-0 bg-black bg-opacity-50 position-fixed d-flex align-items-center justify-content-center"
                 >
-                  <div class="container text-center text-xl-start overflow-auto h-75 mh-100">
+                  <div class="container text-center text-xl-start overflow-auto mh-100">
                     <div class="row bg-white position-relative rounded-2">
                       <img :src="image" :alt="title" class="col-xl-7 px-0" />
                       <div class="col-xl-5 px-10 py-10 py-xxl-30">
