@@ -1,21 +1,25 @@
 <script setup lang="ts">
-import SocialMedia from './SocialMedia.vue'
+import SocialMedia from "./SocialMedia.vue"
 </script>
 
 <template>
-    <footer class="border-top">
+  <footer class="border-top">
     <div class="container pt-75 pb-110 mx-auto row flex-column flex-lg-row">
       <div class="col">
         <h5 class="mb-10 font-jost d-none d-lg-block">Information</h5>
         <ul class="text-center text-lg-start">
           <li class="mb-8 d-flex align-items-start justify-content-center justify-content-lg-start">
-            <img class="pt-1 me-4" src="/address.png" alt="address">
-            <a href="#">喵星區，毛茸茸大道88號，喵喵大樓3樓</a></li>
+            <img class="pt-1 me-4" src="/address.png" alt="address" />
+            <a href="#">喵星區，毛茸茸大道88號，喵喵大樓3樓</a>
+          </li>
           <li class="mb-8">
-            <img class="me-4" src="/phone.png" alt="phone">
-            <a href="tel:+02-888-5678">(02) 888-5678</a></li>
+            <img class="me-4" src="/phone.png" alt="phone" />
+            <a href="tel:+02-888-5678">(02) 888-5678</a>
+          </li>
           <li>
-            <img class="me-4" src="/email.svg" alt="email"><a href="mailto:@meowoffice@linmeow.tw">meowoffice@linmeow.tw</a>
+            <img class="me-4" src="/email.svg" alt="email" /><a href="mailto:@meowoffice@linmeow.tw"
+              >meowoffice@linmeow.tw</a
+            >
           </li>
         </ul>
       </div>
@@ -31,7 +35,10 @@ import SocialMedia from './SocialMedia.vue'
       </div>
       <div class="d-flex flex-column col mt-15 mt-lg-0">
         <h5 class="mb-10 font-jost d-none d-lg-block">Follow us</h5>
-        <SocialMedia class="d-flex justify-content-center justify-content-lg-start gap-4 mb-15" :is-rounded="true"></SocialMedia>
+        <SocialMedia
+          class="d-flex justify-content-center justify-content-lg-start gap-4 mb-15"
+          :is-rounded="true"
+        ></SocialMedia>
         <p class="mt-auto text-center text-lg-start">版權聲明：© 2023喵立翰 版權所有</p>
       </div>
     </div>

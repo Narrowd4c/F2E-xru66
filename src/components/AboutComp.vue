@@ -1,6 +1,6 @@
 <script setup lang="ts">
-import IrregularSvg from '@/components/IrregularSvg.vue'
-import SectionTitle from '@/components/SectionTitle.vue'
+import IrregularSvg from "@/components/IrregularSvg.vue"
+import SectionTitle from "@/components/SectionTitle.vue"
 </script>
 <template>
   <div class="container d-grid grid-areas">
@@ -33,9 +33,9 @@ import SectionTitle from '@/components/SectionTitle.vue'
 </template>
 
 <style lang="scss" scoped>
-@import '~bootstrap/scss/functions';
-@import '@/assets/scss/variables';
-@import '~bootstrap/scss/mixins';
+@import "~bootstrap/scss/functions";
+@import "@/assets/scss/variables";
+@import "~bootstrap/scss/mixins";
 .d-grid {
   display: grid;
 }
@@ -51,24 +51,24 @@ import SectionTitle from '@/components/SectionTitle.vue'
 }
 .grid-areas {
   grid-template-areas:
-    'title'
-    'thumbnail'
-    'content';
+    "title"
+    "thumbnail"
+    "content";
 }
 @include media-breakpoint-up(xl) {
   .grid-areas {
     grid-template-areas:
-      'title thumbnail thumbnail'
-      'content thumbnail thumbnail'
-      'content . . ';
+      "title thumbnail thumbnail"
+      "content thumbnail thumbnail"
+      "content . . ";
   }
 }
 @include media-breakpoint-up(xl) {
   .grid-areas {
     grid-template-areas:
-      'title title thumbnail thumbnail'
-      'content content thumbnail thumbnail'
-      'content content . .';
+      "title title thumbnail thumbnail"
+      "content content thumbnail thumbnail"
+      "content content . .";
   }
 }
 .fish-icon {

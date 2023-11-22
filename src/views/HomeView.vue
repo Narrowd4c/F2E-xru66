@@ -1,20 +1,18 @@
 <script setup lang="ts">
-import BannerComp from '@/components/BannerComp.vue'
-import AboutComp from '@/components/AboutComp.vue'
-import LastActivity from '@/components/LastActivity.vue'
-import PolicyComp from '@/components/PolicyComp.vue'
-import DonateComp from '@/components/DonateComp.vue'
-import FeedBackComp from '@/components/FeedBackComp.vue'
-import { register } from 'swiper/element/bundle'
+import BannerComp from "@/components/BannerComp.vue"
+import AboutComp from "@/components/AboutComp.vue"
+import LastActivity from "@/components/LastActivity.vue"
+import PolicyComp from "@/components/PolicyComp.vue"
+import DonateComp from "@/components/DonateComp.vue"
+import FeedBackComp from "@/components/FeedBackComp.vue"
+import { register } from "swiper/element/bundle"
 // register Swiper custom elements
 register()
-
-
 </script>
 
 <template>
   <div>
-    <BannerComp class="mb-20"/>
+    <BannerComp class="mb-20" />
     <AboutComp id="about" class="mb-257"></AboutComp>
     <LastActivity id="last-activity" class="mb-150"></LastActivity>
     <PolicyComp id="policy" class="mb-217"></PolicyComp>
@@ -23,7 +21,6 @@ register()
   </div>
 </template>
 <style lang="scss">
-
 .mb-490 {
   margin-bottom: 490px;
 }

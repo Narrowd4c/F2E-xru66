@@ -28,34 +28,44 @@
         </swiper-slide>
       </swiper-container>
       <div class="swiper-policy-scrollbar"></div>
-      <img class="position-absolute policy-fish-1" src="@/assets/images/fishicon.svg" alt="fish-icon" aria-hidden="true"/>
-      <img class="position-absolute policy-fish-2" src="@/assets/images/fishicon.svg" alt="fish-icon" aria-hidden="true" />
+      <img
+        class="position-absolute policy-fish-1"
+        src="@/assets/images/fishicon.svg"
+        alt="fish-icon"
+        aria-hidden="true"
+      />
+      <img
+        class="position-absolute policy-fish-2"
+        src="@/assets/images/fishicon.svg"
+        alt="fish-icon"
+        aria-hidden="true"
+      />
     </div>
   </div>
 </template>
 
 <script setup lang="ts">
-import { ref, onMounted } from 'vue'
-import SectionTitle from './SectionTitle.vue'
-import PolicyImg1 from '@/assets/images/policy1.png'
-import PolicyImg2 from '@/assets/images/policy2.png'
+import { ref, onMounted } from "vue"
+import SectionTitle from "./SectionTitle.vue"
+import PolicyImg1 from "@/assets/images/policy1.png"
+import PolicyImg2 from "@/assets/images/policy2.png"
 const policyList = ref([
   {
     image: PolicyImg1,
-    title: '為毛孩子謀福利！推動寵物醫療保障方案',
+    title: "為毛孩子謀福利！推動寵物醫療保障方案",
     contents: [
-      '街上氣氛真設立寵物醫療基金：每年撥款新台幣 10 億元，專款專用於支援家庭寵物的醫療費用',
-      '提供醫療補助：每隻寵物每年可獲得高達新台幣 20,000 元的醫療補助，減輕飼主的經濟壓力',
-      '合作動物醫院：目前已有和超過 200 家動物醫院進行初步的合作討論的很棒，從小孩到大人，甚至有些狗狗朋友都帶著貓耳來找我握手，真的太可愛了！這次的活動不僅讓我看到大家的熱情，更加堅定了我推進「貓咪友善環境」政策的決心。'
+      "街上氣氛真設立寵物醫療基金：每年撥款新台幣 10 億元，專款專用於支援家庭寵物的醫療費用",
+      "提供醫療補助：每隻寵物每年可獲得高達新台幣 20,000 元的醫療補助，減輕飼主的經濟壓力",
+      "合作動物醫院：目前已有和超過 200 家動物醫院進行初步的合作討論的很棒，從小孩到大人，甚至有些狗狗朋友都帶著貓耳來找我握手，真的太可愛了！這次的活動不僅讓我看到大家的熱情，更加堅定了我推進「貓咪友善環境」政策的決心。"
     ]
   },
   {
     image: PolicyImg2,
-    title: '為毛孩子謀福利！推動寵物醫療保障方案',
+    title: "為毛孩子謀福利！推動寵物醫療保障方案",
     contents: [
-      '街上氣氛真設立寵物醫療基金：每年撥款新台幣 10 億元，專款專用於支援家庭寵物的醫療費用',
-      '提供醫療補助：每隻寵物每年可獲得高達新台幣 20,000 元的醫療補助，減輕飼主的經濟壓力',
-      '合作動物醫院：目前已有和超過 200 家動物醫院進行初步的合作討論的很棒，從小孩到大人，甚至有些狗狗朋友都帶著貓耳來找我握手，真的太可愛了！這次的活動不僅讓我看到大家的熱情，更加堅定了我推進「貓咪友善環境」政策的決心。'
+      "街上氣氛真設立寵物醫療基金：每年撥款新台幣 10 億元，專款專用於支援家庭寵物的醫療費用",
+      "提供醫療補助：每隻寵物每年可獲得高達新台幣 20,000 元的醫療補助，減輕飼主的經濟壓力",
+      "合作動物醫院：目前已有和超過 200 家動物醫院進行初步的合作討論的很棒，從小孩到大人，甚至有些狗狗朋友都帶著貓耳來找我握手，真的太可愛了！這次的活動不僅讓我看到大家的熱情，更加堅定了我推進「貓咪友善環境」政策的決心。"
     ]
   }
 ])
@@ -63,17 +73,17 @@ const policyList = ref([
 const swiperPolicy = ref()
 
 const swiperParams = {
-  direction: 'horizontal',
+  direction: "horizontal",
   scrollbar: {
-    el: '.swiper-policy-scrollbar',
+    el: ".swiper-policy-scrollbar",
     draggable: true,
-    dragClass: 'swiper-policy-scrollbar-drag'
+    dragClass: "swiper-policy-scrollbar-drag"
   },
   autoHeight: true,
   slidesPerView: 1,
   breakpoints: {
     1200: {
-      direction: 'vertical'
+      direction: "vertical"
     }
   }
 }
@@ -84,9 +94,9 @@ onMounted(() => {
 </script>
 
 <style lang="scss">
-@import '~bootstrap/scss/functions';
-@import '@/assets/scss/variables.scss';
-@import '~bootstrap/scss/mixins';
+@import "~bootstrap/scss/functions";
+@import "@/assets/scss/variables.scss";
+@import "~bootstrap/scss/mixins";
 
 .policy {
   margin-top: 20%;

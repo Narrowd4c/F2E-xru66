@@ -37,21 +37,20 @@
     </div>
   </header>
   <ScrollTop></ScrollTop>
-    
 </template>
 
 <script setup lang="ts">
-import { ref, watchEffect } from 'vue'
-import IconLogo from './icons/IconLogo.vue'
-import SocialMedia from './SocialMedia.vue'
-import ScrollTop from './ScrollTop.vue'
+import { ref, watchEffect } from "vue"
+import IconLogo from "./icons/IconLogo.vue"
+import SocialMedia from "./SocialMedia.vue"
+import ScrollTop from "./ScrollTop.vue"
 
 const navbar = ref([
-  { sectionName: 'About', link: '#about' },
-  { sectionName: 'Last Activity', link: '#last-activity' },
-  { sectionName: 'Policy', link: '#policy' },
-  { sectionName: 'Donate', link: '#donate' },
-  { sectionName: 'Feedback', link: '#feedback' }
+  { sectionName: "About", link: "#about" },
+  { sectionName: "Last Activity", link: "#last-activity" },
+  { sectionName: "Policy", link: "#policy" },
+  { sectionName: "Donate", link: "#donate" },
+  { sectionName: "Feedback", link: "#feedback" }
 ])
 
 const menuIsShow = ref(false)
@@ -60,15 +59,15 @@ function menuToggle() {
 }
 watchEffect(() => {
   menuIsShow.value
-    ? (document.body.style.overflow = 'hidden')
-    : (document.body.style.overflow = 'auto')
+    ? (document.body.style.overflow = "hidden")
+    : (document.body.style.overflow = "auto")
 })
 </script>
 
 <style lang="scss" scoped>
-@import '~bootstrap/scss/functions';
-@import '@/assets/scss/variables';
-@import '~bootstrap/scss/mixins';
+@import "~bootstrap/scss/functions";
+@import "@/assets/scss/variables";
+@import "~bootstrap/scss/mixins";
 
 .nav-font {
   line-height: 166.667%;

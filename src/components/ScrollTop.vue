@@ -8,7 +8,7 @@
 </template>
 
 <script setup lang="ts">
-import { scrollToTop } from '../composables/scrollToTop'
+import { scrollToTop } from "../composables/scrollToTop"
 </script>
 
 <style lang="scss" scoped>

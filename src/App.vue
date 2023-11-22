@@ -1,20 +1,18 @@
 <script setup lang="ts">
-import { RouterView } from 'vue-router'
-import Footer from './components/FooterComp.vue'
-import Header from './components/HeaderComp.vue'
-import { useHead, useSeoMeta } from '@unhead/vue'
-import ogImage from '@/assets/images/OIG_2.png'
-
-const ogImg = new URL(ogImage, window.location.origin).href;
+import { RouterView } from "vue-router"
+import Footer from "./components/FooterComp.vue"
+import Header from "./components/HeaderComp.vue"
+import { useHead, useSeoMeta } from "@unhead/vue"
+import ogImage from "@/assets/images/OIG_2.png"
 
 useHead({
-  title: '2024 喵立漢立委競選網站',
+  title: "2024 喵立漢立委競選網站",
   link: [
     {
-      rel: 'icon',
-      href: './webicon.svg'
+      rel: "icon",
+      href: "./webicon.svg"
     }
-  ],
+  ]
 })
 
 useSeoMeta({
@@ -25,9 +23,8 @@ useSeoMeta({
   ogUrl: window.location.origin + import.meta.env.BASE_URL,
   ogImageWidth: 800,
   ogImageHeight: 450,
-  ogType: "website",
+  ogType: "website"
 })
-
 </script>
 
 <template>

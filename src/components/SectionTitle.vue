@@ -10,28 +10,28 @@ defineProps({
   subTitle: {
     type: String,
     required: true,
-    default: 'subTitle'
+    default: "subTitle"
   },
   title: {
     type: String,
     required: true,
-    default: 'title'
+    default: "title"
   },
   width: {
     type: String,
-    default: 'fit-content'
+    default: "fit-content"
   }
 })
 </script>
 
 <style lang="scss">
-@import '~bootstrap/scss/functions';
-@import '@/assets/scss/variables.scss';
-@import '~bootstrap/scss/mixins';
+@import "~bootstrap/scss/functions";
+@import "@/assets/scss/variables.scss";
+@import "~bootstrap/scss/mixins";
 
-@include media-breakpoint-up(xxl){
-  .fs-xxl-80px{
-    font-size:80px !important;
+@include media-breakpoint-up(xxl) {
+  .fs-xxl-80px {
+    font-size: 80px !important;
   }
 }
 .title-max-width {

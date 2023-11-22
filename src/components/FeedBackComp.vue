@@ -14,7 +14,7 @@
       </div>
       <div class="ms-auto col-xl-6">
         <form class="bg-primary bg-opacity-10 pt-6 pb-13 px-5 py-xl-20 px-xl-15 text-gray shadow">
-          <div class="mb-6" v-for="{id, placeholder, label, type} in inputList" :key="id">
+          <div class="mb-6" v-for="{ id, placeholder, label, type } in inputList" :key="id">
             <label :for="id" class="mb-2 font-space text-gray">{{ label }}</label>
             <input
               class="border-0 w-100 px-4 py-2 font-space text-gray"
@@ -23,7 +23,7 @@
               :placeholder="placeholder"
             />
           </div>
-          <div class="mb-6 ">
+          <div class="mb-6">
             <label for="comment" class="mb-2 font-space">建言</label>
             <textarea
               class="border-0 h-214 w-100 px-4 py-2 font-space"
@@ -39,12 +39,12 @@
 </template>
 
 <script setup lang="ts">
-import SectionTitle from '@/components/SectionTitle.vue'
-import { shallowRef } from 'vue'
+import SectionTitle from "@/components/SectionTitle.vue"
+import { shallowRef } from "vue"
 const inputList = shallowRef([
-  { id: 'user-name', placeholder: '請輸入姓名', label: '姓名', type:'text' },
-  { id: 'email', placeholder: '請輸入 Email', label: 'Email' ,type:'email'},
-  { id: 'phone', placeholder: '請輸入手機號碼', label: '手機' ,type:'text'},
+  { id: "user-name", placeholder: "請輸入姓名", label: "姓名", type: "text" },
+  { id: "email", placeholder: "請輸入 Email", label: "Email", type: "email" },
+  { id: "phone", placeholder: "請輸入手機號碼", label: "手機", type: "text" }
 ])
 </script>
 

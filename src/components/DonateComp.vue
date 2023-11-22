@@ -55,7 +55,9 @@
                           眾所皆知貓是外星人派來統治地球的。但牠們發現，只要一直喵喵叫，就能吃到很多好吃的，所以牠們決定要收人類為僕。除了飲食外，玩樂也是相當重要，要時刻注意主子的運動量，才能活得長長久久喔。
                         </p>
                         <p class="mb-2 mb-xxl-4">捐款新台幣</p>
-                        <div class="row align-items-center font-jost mb-10 justify-content-center justify-content-xl-between">
+                        <div
+                          class="row align-items-center font-jost mb-10 justify-content-center justify-content-xl-between"
+                        >
                           <button
                             class="col-4 col-xl-3 me-4 me-xl-0 order-1 order-xl-0 bg-white border-1 rounded-3 py-2 px-4 py-xxl-4 fs-5"
                           >
@@ -111,16 +113,16 @@
 </template>
 
 <script setup lang="ts">
-import { ref, onMounted } from 'vue'
-import SectionTitle from './SectionTitle.vue'
-import donate1 from '@/assets/images/donate1.png'
-import donate2 from '@/assets/images/donate2.png'
-import donate3 from '@/assets/images/donate3.png'
+import { ref, onMounted } from "vue"
+import SectionTitle from "./SectionTitle.vue"
+import donate1 from "@/assets/images/donate1.png"
+import donate2 from "@/assets/images/donate2.png"
+import donate3 from "@/assets/images/donate3.png"
 
 const donateList = ref([
-  { image: donate1, title: '喵星人之友', price: '600', people: '9,957' },
-  { image: donate2, title: '喵星大使', price: '6,000', people: '2,000' },
-  { image: donate3, title: '喵星傳奇', price: '600', people: '999' }
+  { image: donate1, title: "喵星人之友", price: "600", people: "9,957" },
+  { image: donate2, title: "喵星大使", price: "6,000", people: "2,000" },
+  { image: donate3, title: "喵星傳奇", price: "600", people: "999" }
 ])
 const isAgree = ref(false)
 
@@ -136,7 +138,7 @@ onMounted(() => {
 })
 
 const showDonateDialog = ref(false)
-const current = ref('')
+const current = ref("")
 function showDonate(val: string) {
   showDonateDialog.value = true
   current.value = val
@@ -144,9 +146,9 @@ function showDonate(val: string) {
 </script>
 
 <style lang="scss" scoped>
-@import '~bootstrap/scss/functions';
-@import '@/assets/scss/variables';
-@import '~bootstrap/scss/mixins';
+@import "~bootstrap/scss/functions";
+@import "@/assets/scss/variables";
+@import "~bootstrap/scss/mixins";
 
 swiper-container::part(container) {
   overflow-y: visible;
@@ -193,5 +195,4 @@ swiper-container::part(container) {
     letter-spacing: 7.2px;
   }
 }
-
 </style>

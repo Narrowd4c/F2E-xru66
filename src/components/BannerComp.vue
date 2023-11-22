@@ -8,8 +8,18 @@
           台灣的明天，<br />喵先鋪路
         </h2>
         <div class="fish">
-          <img src="@/assets/images/fishicon.svg" aria-hidden="true" alt="fish-icon" class="fish-icon" />
-          <img src="@/assets/images/fishicon.svg" aria-hidden="true"  alt="fish-icon" class="fish-icon-sm" />
+          <img
+            src="@/assets/images/fishicon.svg"
+            aria-hidden="true"
+            alt="fish-icon"
+            class="fish-icon"
+          />
+          <img
+            src="@/assets/images/fishicon.svg"
+            aria-hidden="true"
+            alt="fish-icon"
+            class="fish-icon-sm"
+          />
         </div>
       </div>
     </div>
@@ -17,27 +27,26 @@
 </template>
 
 <script setup lang="ts">
-import BannerBackground from '@/components/BannerBackground.vue'
-import BannerBackgroundMd from '@/components/BannerBackgroundMd.vue'
+import BannerBackground from "@/components/BannerBackground.vue"
+import BannerBackgroundMd from "@/components/BannerBackgroundMd.vue"
 </script>
 
-
 <style lang="scss" scoped>
-@import '~bootstrap/scss/functions';
-@import '@/assets/scss/variables';
-@import '~bootstrap/scss/mixins';
-.banner-text{
+@import "~bootstrap/scss/functions";
+@import "@/assets/scss/variables";
+@import "~bootstrap/scss/mixins";
+.banner-text {
   font-weight: 800;
   font-size: 40px;
   letter-spacing: 12px;
   padding-top: 52px;
 }
 @include media-breakpoint-up(xl) {
-  .banner-text{
-  font-size: clamp(10px, calc(40px + 2dvw), 100px);
-  letter-spacing: calc(30px - 1dvw);
-  padding-top: calc(60px + 2dvw);
-}
+  .banner-text {
+    font-size: clamp(10px, calc(40px + 2dvw), 100px);
+    letter-spacing: calc(30px - 1dvw);
+    padding-top: calc(60px + 2dvw);
+  }
 }
 
 @include media-breakpoint-up(xxl) {
